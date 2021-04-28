@@ -1,0 +1,8 @@
+[Unit]
+Description=Wait for EC2 instance to leave Auto Scaling Group Warm Pool
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+TimeoutStartSec=0
+ExecStart=/usr/bin/amazon-ec2-wait-for-inservice
